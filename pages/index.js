@@ -1,9 +1,12 @@
-export default function Home() {
+import { injectIntl, FormattedMessage } from 'react-intl';
+import messages from './index.messages';
+
+const Home = () => {
 	return (
 		<div >
-			<h1>
-        Bienvenido a Splight
-			</h1>
+			<FormattedMessage {...messages.home} />
 		</div>
 	);
-}
+};
+
+export default injectIntl(Home);

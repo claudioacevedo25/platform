@@ -1,5 +1,5 @@
 import { injectIntl, FormattedMessage } from 'react-intl';
-import messages from './index.messages';
+import messages from '../components/index.messages';
 
 const Home = () => {
 	return (

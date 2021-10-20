@@ -3,7 +3,7 @@ import messages from '../components/index.messages';
 
 const Home = () => {
 	return (
-		<div >
+		<div>
 			<FormattedMessage {...messages.home} />
 		</div>
 	);

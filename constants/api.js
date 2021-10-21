@@ -5,4 +5,6 @@ export const httpRequestsValues = {
 	DELETE: 'delete',
 	POST: 'post',
 };
+
+export const API_SESSION = '/api/auth/getSession';
   

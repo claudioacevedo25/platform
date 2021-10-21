@@ -1,7 +1,6 @@
 import { injectIntl, FormattedMessage } from 'react-intl';
 import { useUser } from '@auth0/nextjs-auth0';
 import messages from '../components/index.messages';
-//TODO Delete this comment
 
 const Home = () => {
 

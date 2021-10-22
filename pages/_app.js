@@ -6,13 +6,13 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<ThemeContextProvider>
-			<UserProvider>
-				<IntlProvider locale="en" messages={messages['en']}>
+		<UserProvider>
+			<IntlProvider locale="en" messages={messages['en']}>
+				<ThemeContextProvider>
 					<Component {...pageProps} />
-				</IntlProvider>
-			</UserProvider>
-		</ThemeContextProvider>
+				</ThemeContextProvider>
+			</IntlProvider>
+		</UserProvider>
 	);
 }
 

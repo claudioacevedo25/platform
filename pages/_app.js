@@ -8,10 +8,8 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<UserProvider>
 			<IntlProvider locale="en" messages={messages['en']}>
-				<ThemeContextProvider initialTheme="dark">
-				
+				<ThemeContextProvider >
 					<Component {...pageProps} />
-			
 				</ThemeContextProvider>
 			</IntlProvider>
 		</UserProvider>

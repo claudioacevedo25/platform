@@ -1,9 +1,9 @@
 import { handleAuth, handleLogin } from '@auth0/nextjs-auth0';
-
 export default handleAuth({
 	async login(req, res) {
 		try {
 			await handleLogin(req, res, {
+				returnTo: '/home',
 				authorizationParams: {
 					audience: 'https://splight-ae.com/test', // or AUTH0_AUDIENCE
 					// Add the `offline_access` scope to also get a Refresh Token

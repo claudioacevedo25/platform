@@ -2,8 +2,8 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import { useUser } from '@auth0/nextjs-auth0';
 import messages from '../components/index.messages';
 
-const Home = () => {
-
+const Login = () => {
+// esta pagina va ser la que te redireccione a auth0, va ser nuestro "login"
 	const { user, error, isLoading } = useUser();
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>;
@@ -22,4 +22,4 @@ const Home = () => {
 	return <a href="/api/auth/login">Login</a>;
 };
 
-export default injectIntl(Home);
+export default injectIntl(Login);

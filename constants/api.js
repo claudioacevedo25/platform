@@ -7,4 +7,3 @@ export const httpRequestsValues = {
 };
 
 export const API_SESSION = '/api/auth/getSession';
-  

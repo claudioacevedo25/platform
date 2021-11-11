@@ -1,26 +1,23 @@
-import { injectIntl, FormattedMessage } from 'react-intl';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { useUser } from '@auth0/nextjs-auth0';
-import messages from '../components/index.messages';
+import { Spinner } from '@splight-ae/splight-ui';
+import LoginPage from '../components/LoginPage';
 
 const Login = () => {
+	const { user, isLoading } = useUser();
+	const router = useRouter();
+	useEffect(() => {
+		!!user && router.push('/home');
+	}, [user]);
 
-	// esta pagina va ser la que te redireccione a auth0, va ser nuestro "login"
-	const { user, error, isLoading } = useUser();
-	if (isLoading) return <div>Loading...</div>;
-	if (error) return <div>{error.message}</div>;
-	if (user) {
-		return (
-			<div>
-				<div>
-					<h1>
-						<FormattedMessage {...messages.home} />
-					</h1>
-				</div>
-				Welcome {user.name}! <a href="/api/auth/logout">Logout</a>
-			</div>
-		);
-	}
-	return <a href="/api/auth/login">Login</a>;
+	return (
+		isLoading || !!user
+			?
+			<Spinner />
+			:
+			<LoginPage />
+	);
 };
 
-export default injectIntl(Login);
+export default Login;

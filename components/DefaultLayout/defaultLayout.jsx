@@ -5,6 +5,7 @@ import { pages } from '../../constants/pages';
 import style from './defaultLayout.module.css';
 
 const DefaultLayout = ({ children }) => {
+	const isLoginPage = children.type.name === 'Login';
 	const { user } = useUser();
 
 	const avatar =
@@ -27,7 +28,7 @@ const DefaultLayout = ({ children }) => {
 				!!user && <Header pages={pages} currentPage={currentPage} onClick={changePage} user={avatar} />
 			}
 
-			<main className= {style.defaultLayout__main}>{children}</main>
+			<main className={`${style.defaultLayout__main} ${!!isLoginPage && style.defaultLayout__login}`}>{children}</main>
 		</>
 	);
 };

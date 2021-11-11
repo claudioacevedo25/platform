@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<UserProvider>
 			<IntlProvider locale="en" messages={messages['en']}>
-				<ThemeContextProvider initialTheme="light" >
+				<ThemeContextProvider>
 					<DefaultLayout>
 						<Component {...pageProps} />
 					</DefaultLayout>

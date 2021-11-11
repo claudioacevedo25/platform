@@ -1,0 +1,41 @@
+.loginPage__container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.loginPage__navIcon {
+    padding: 22px 24px 0;
+}
+
+.loginPage__content {
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.loginPage__content__item {
+    align-self: center;
+    text-align: center;
+}
+
+.loginPage__content__typography {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 24rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.loginPage__content__button button {
+    border: 1px solid rgb(var(--color1));
+    background-color: transparent;
+    cursor: default;
+}
+
+.loginPage__anchor, .loginPage__anchor label {
+    text-decoration: none;
+    cursor: pointer;
+}

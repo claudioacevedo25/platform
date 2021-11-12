@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useUser } from '@auth0/nextjs-auth0';
 import { Header, Avatar, Popover, Typography, Button, ThemeContext } from '@splight-ae/splight-ui';
 import { pages } from '../../constants/pages';
@@ -42,6 +43,14 @@ const DefaultLayout = ({ children }) => {
 			<main className={`${style.defaultLayout__main} ${!!isLoginPage && style.defaultLayout__login}`}>{children}</main>
 		</>
 	);
+};
+
+DefaultLayout.defaultProps = {
+	children: <></>,
+};
+
+DefaultLayout.propTypes = {
+	children: PropTypes.element.isRequired,
 };
 
 export default DefaultLayout;

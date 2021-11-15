@@ -1,0 +1,13 @@
+.homePage__welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.homePage__welcome__icon {
+    align-self: center;
+    text-align: center;
+}
+.homePage__content {
+    display: flex;
+    flex-wrap: wrap;
+}

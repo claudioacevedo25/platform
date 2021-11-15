@@ -5,6 +5,11 @@ import messages from './loginPage.messages';
 import style from './loginPage.module.css';
 
 const LoginPageComponent = () => {
+
+	const redirect = ()=> {
+		window.location.href = '/api/auth/login';
+	};
+
 	return(
 		<div className={style.loginPage__container}>
 			<div className={style.loginPage__navIcon}>
@@ -25,12 +30,8 @@ const LoginPageComponent = () => {
 					</Typography>
 				</div>
 				<div className={`${style.loginPage__content__item} ${style.loginPage__content__button}`}>
-					<Button >
-						<a href="/api/auth/login" className={style.loginPage__anchor}>
-							<Typography variant='textButton'>
-								<FormattedMessage {...messages.loginButton}/>
-							</Typography>
-						</a>
+					<Button onClick={()=> redirect()} >
+						<FormattedMessage {...messages.loginButton}/>
 					</Button>
 				</div>
 			</div>

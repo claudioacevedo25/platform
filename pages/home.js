@@ -7,7 +7,7 @@ export default function Home({user}) {
 		
 		<div className="home">
 			<Typography>Welcome {user.name}</Typography>
-			<div> <a href="/api/auth/logout"> Logout</a></div>
+			<div> <a href="/api/auth/logout"> Cerrar sesion</a></div>
 		</div>
 	);
 }

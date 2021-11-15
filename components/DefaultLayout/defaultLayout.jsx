@@ -14,9 +14,9 @@ const DefaultLayout = ({ children }) => {
 
 	const user_metadata = (user && user[USER_METADATA_AUTH0]) && user[USER_METADATA_AUTH0];
 	const theme = user_metadata && user_metadata.theme;
-
+	
 	useEffect(() => {
-		!!user && setTheme(theme);
+		!!user && !!theme  && setTheme(theme);
 	}, [user]);
 
 

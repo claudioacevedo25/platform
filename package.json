@@ -18,7 +18,7 @@
     "react-intl": "^5.20.13"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "eslint": "^8.2.0",
     "eslint-config-next": "11.1.0",
     "eslint-plugin-react": "^7.26.1"
   }

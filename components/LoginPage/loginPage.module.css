@@ -32,7 +32,6 @@
 .loginPage__content__button button {
     border: 1px solid rgb(var(--color1));
     background-color: transparent;
-    cursor: default;
 }
 
 .loginPage__anchor, .loginPage__anchor label {

@@ -9,24 +9,24 @@ const HomePageContainer = () => {
 	});
 
 	const fetchFavs = async () => {
-		try {
-			if (!digitalOffer.fav.length) {
+		if (!digitalOffer.fav.length) {
+			try {
 				const data = await getDigitalOfferFav();
 				setDigitalOffer({ ...digitalOffer, fav: data.results });
+			} catch (error) {
+				console.log('error :>> ', error);
 			}
-		} catch (error) {
-			console.log('error :>> ', error);
 		}
 	};
 
 	const fetchRecents = async () => {
-		try {
-			if (!digitalOffer.recents.length) {
+		if (!digitalOffer.recents.length) {
+			try {
 				const data = await getDigitalOfferRecent();
 				setDigitalOffer({ ...digitalOffer, recents: data.results });
+			} catch (error) {
+				console.log('error :>> ', error);
 			}
-		} catch (error) {
-			console.log('error :>> ', error);
 		}
 	};
 

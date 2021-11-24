@@ -1,5 +1,6 @@
 {
     "loginPage.title": "welcome to splight",
     "loginPage.subtitle": "we are a technology company fully dedicated to the energy sector",
-    "loginPage.loginButton": "let's start"
+    "loginPage.loginButton": "let's start",
+    "HomePage.title": "welcome to splight"
 }

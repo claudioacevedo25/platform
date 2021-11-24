@@ -19,15 +19,16 @@ const DefaultLayout = ({ children }) => {
 		!!user && !!theme  && setTheme(theme);
 	}, [user]);
 
-
 	const avatar =
-		<Popover position="right" displayLabel={<Avatar src={user && user.picture} name={user && user.given_name} />}>
+		<Popover position="right" displayLabel={<Avatar src={user && user.picture} name={user && user.given_name} size={36} />}>
 			<Avatar
 				src={user && user.picture}
 				name={user && user.name}
 			/>
 			<Typography variant="h3">{user && user.given_name}</Typography>
-			<Button>My Profile</Button>
+			<Button>
+				<a href="api/auth/logout">cerrar sesion</a>
+			</Button>
 		</Popover>;
 
 	const [currentPage, setCurrentPage] = useState(pages[0]);

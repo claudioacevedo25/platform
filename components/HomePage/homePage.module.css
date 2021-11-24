@@ -1,0 +1,25 @@
+.homePage__welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    margin-top: 7rem;
+}
+
+.homePage__welcome__icon {
+    align-self: center;
+    text-align: center;
+}
+
+.homePage__welcome__icon:last-child {
+    margin-bottom: 15vh;
+}
+
+.homePage__content__tab {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homePage__content__tab > div {
+   margin-right: 1.6rem;
+}
+

@@ -1,14 +1,9 @@
-// pages/protected-page.js
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import { Typography } from '@splight-ae/splight-ui';
+import HomePage from '../components/HomePage';
 
-export default function Home({user}) {
+export default function Home() {
 	return (
-		
-		<div className="home">
-			<Typography>Welcome {user.name}</Typography>
-			<div> <a href="/api/auth/logout"> Cerrar sesion</a></div>
-		</div>
+		<HomePage />
 	);
 }
 

@@ -10,9 +10,10 @@
 
 .loginPage__content {
     display: flex;
-    height: 70%;
+    height: 77%;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-top: 2rem;
 }
 
 .loginPage__content__item {
@@ -23,7 +24,7 @@
 .loginPage__content__typography {
     display: flex;
     flex-wrap: wrap;
-    max-width: 24rem;
+    max-width: 25rem;
     text-align: center;
     line-height: 1.5;
 }

@@ -1,9 +1,9 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import HomePage from '../components/HomePage';
 
-export default function Home({ user }) {
+export default function Home() {
 	return (
-		<HomePage user={user} />
+		<HomePage />
 	);
 }
 

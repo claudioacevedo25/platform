@@ -1,8 +1,11 @@
+.homePage__container {
+}
+
 .homePage__welcome {
     display: flex;
     flex-direction: column;
     gap: 10vh;
-    margin-top: 7rem;
+    padding-top: 4rem;
 }
 
 .homePage__welcome__icon {
